@@ -1,0 +1,46 @@
+{
+  "name": "dydx-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "nodemon src/index.ts",
+    "dev:debug": "nodemon --inspect src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "test": "NODE_ENV=test jest --runInBand --detectOpenHandles",
+    "coverage": "NODE_ENV=test jest --coverage --runInBand --detectOpenHandles"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@dydxprotocol/solo": "^0.27.3",
+    "@types/lru-cache": "^5.1.0",
+    "@types/luxon": "^1.21.0",
+    "dotenv-flow": "^3.1.0",
+    "lru-cache": "^5.1.1",
+    "luxon": "^1.21.2",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.8",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@types/dotenv-flow": "^3.0.0",
+    "@types/jest": "^24.0.23",
+    "@types/request-promise-native": "^1.0.17",
+    "@typescript-eslint/eslint-plugin": "^2.9.0",
+    "@typescript-eslint/parser": "^2.9.0",
+    "eslint": "^6.7.1",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-jest": "^23.0.4",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.2",
+    "typescript": "^3.7.2"
+  }
+}
