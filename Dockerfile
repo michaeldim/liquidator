@@ -7,12 +7,14 @@ USER dydx
 
 WORKDIR /home/dydx/app
 
-COPY ./.babelrc* ./
 COPY ./.env* ./
-COPY ./package.json ./package-lock.json ./
+COPY package*.json ./
+
 RUN npm ci --loglevel warn
 
 COPY ./src ./src
+COPY tsconfig.json .
+
 RUN npm run build
 
 CMD ["npm", "start"]

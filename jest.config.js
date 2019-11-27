@@ -1,5 +1,10 @@
 module.exports = {
-  globalSetup: './__tests__/helpers/setup.js',
-  testPathIgnorePatterns: ['/node_modules/', '/__tests__/helpers/'],
-  testEnvironment: 'node',
+    preset: 'ts-jest',
+    testEnvironment: 'node',
+    setupFiles: ['dotenv-flow/config'],
+    globals: {
+        'ts-jest': {
+            diagnostics: false,
+        },
+    },
 };
